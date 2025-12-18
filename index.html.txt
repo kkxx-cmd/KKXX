@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日资讯 - 简单新闻门户</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        /* 头部 */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        /* 主内容区 */
+        main {
+            flex: 3;
+            min-width: 300px;
+        }
+        /* 轮播头条 */
+        .slider {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .slider h2 {
+            margin-top: 10px;
+            font-size: 1.8em;
+        }
+        /* 新闻列表 */
+        .news-list {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .news-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .news-item img {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .news-item div {
+            flex: 1;
+        }
+        .news-item h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .news-item p {
+            color: #666;
+        }
+        .news-item span {
+            color: #999;
+            font-size: 0.9em;
+        }
+        /* 侧边栏 */
+        aside {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        aside h2 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside ul li {
+            margin-bottom: 15px;
+        }
+        aside ul li a {
+            font-weight: bold;
+        }
+        /* 底部 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .news-item {
+                flex-direction: column;
+            }
+            .news-item img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>每日资讯</h1>
+        <p>最新热点新闻，尽在掌握</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">国内</a></li>
+            <li><a href="#">国际</a></li>
+            <li><a href="#">科技</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <!-- 头条轮播（示例用一张图片） -->
+            <section class="slider">
+                <img src="https://via.placeholder.com/1200x400?text=头条新闻：重大事件发生" alt="头条新闻">
+                <h2>重大科技突破：AI新模型发布</h2>
+                <p>2025年最新AI技术将改变世界...</p>
+            </section>
+            <!-- 新闻列表 -->
+            <section class="news-list">
+                <article class="news-item">
+                    <img src="https://via.placeholder.com/200x120?text=新闻1" alt="新闻图片">
+                    <div>
+                        <h3><a href="#">国内经济回暖，股市创历史新高</a></h3>
+                        <p>最新数据显示，经济指标全面向好，专家预测未来前景乐观。</p>
+                        <span>2025-12-18</span>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <img src="https://via.placeholder.com/200x120?text=新闻2" alt="新闻图片">
+                    <div>
+                        <h3><a href="#">国际峰会闭幕，多国达成共识</a></h3>
+                        <p>领导人就气候变化和贸易问题进行深入讨论。</p>
+                        <span>2025-12-17</span>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <img src="https://via.placeholder.com/200x120?text=新闻3" alt="新闻图片">
+                    <div>
+                        <h3><a href="#">体育盛事：中国队夺金</a></h3>
+                        <p>奥运会赛场，中国运动员表现出色。</p>
+                        <span>2025-12-16</span>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <h2>热门新闻</h2>
+            <ul>
+                <li><a href="#">1. AI技术革命即将到来</a></li>
+                <li><a href="#">2. 全球气候大会成果公布</a></li>
+                <li><a href="#">3. 娱乐圈最新八卦</a></li>
+                <li><a href="#">4. 股市投资指南</a></li>
+                <li><a href="#">5. 健康生活小贴士</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2025 每日资讯 All Rights Reserved.</p>
+        <p>联系我们 | 隐私政策</p>
+    </footer>
+</body>
+</html>
